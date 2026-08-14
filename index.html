@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Streak Hub</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">
+      🔥 Study Streak Hub by Opelee
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Leaderboard</a></li>
+      <li><a href="#">AI Assistant</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button id="themeToggle">🌙</button>
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-left">
+
+      <h1>
+        Build Your Reading Habit
+        <span>And Maintain Your Streak 🔥</span>
+      </h1>
+
+      <p>
+        A premium educational productivity platform for students.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="primary-btn">
+          Start Reading
+        </button>
+
+        <button class="secondary-btn">
+          Join Now
+        </button>
+      </div>
+
+    </div>
+
+    <div class="hero-right">
+
+      <div class="glass-card">
+
+        <h3>Current Streak</h3>
+
+        <h1 id="streakDisplay">0🔥</h1>
+
+        <p id="countdown"></p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- AUTH -->
+  <section class="auth-section">
+
+    <div class="auth-container">
+
+      <h2>Create Account</h2>
+
+      <input type="text" id="name" placeholder="Full Name">
+
+      <input type="email" id="email" placeholder="Email Address">
+
+      <input type="password" id="password" placeholder="Password">
+
+      <button onclick="signup()">
+        Sign Up
+      </button>
+
+      <hr>
+
+      <h2>Login</h2>
+
+      <input type="email" id="loginEmail" placeholder="Email">
+
+      <input type="password" id="loginPassword" placeholder="Password">
+
+      <button onclick="login()">
+        Login
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- USER DASHBOARD -->
+  <section class="dashboard">
+
+    <div class="dashboard-header">
+
+      <div class="profile-card">
+
+        <img src="https://i.imgur.com/6VBx3io.png" id="profileImage">
+
+        <div>
+
+          <h2 id="welcomeText">
+            Welcome 👋
+          </h2>
+
+          <p id="userEmail"></p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="dashboard-grid">
+
+      <!-- STREAK -->
+      <div class="dashboard-card">
+
+        <h3>🔥 Reading Streak</h3>
+
+        <h1 id="currentStreak">0</h1>
+
+        <button id="markReadingBtn">
+          Mark Today's Reading
+        </button>
+
+      </div>
+
+      <!-- LONGEST STREAK -->
+      <div class="dashboard-card">
+
+        <h3>🏆 Longest Streak</h3>
+
+        <h1 id="longestStreak">0</h1>
+
+      </div>
+
+      <!-- TOTAL DAYS -->
+      <div class="dashboard-card">
+
+        <h3>📚 Total Reading Days</h3>
+
+        <h1 id="totalDays">0</h1>
+
+      </div>
+
+      <!-- CLOCK -->
+      <div class="dashboard-card">
+
+        <h3>⏰ Real Time Clock</h3>
+
+        <h1 id="clock"></h1>
+
+      </div>
+
+      <!-- CHART -->
+      <div class="dashboard-card chart-card">
+
+        <h3>📊 Weekly Reading Analytics</h3>
+
+        <canvas id="readingChart"></canvas>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- UPLOAD -->
+  <section class="upload-section">
+
+    <h2>📁 Upload Study Materials</h2>
+
+    <div class="upload-box">
+
+      <input type="file" id="fileInput">
+
+      <button onclick="uploadFile()">
+        Upload
+      </button>
+
+    </div>
+
+    <div id="uploadList"></div>
+
+  </section>
+
+  <!-- AI ASSISTANT -->
+  <div class="ai-container">
+
+    <button class="ai-toggle">
+      🤖
+    </button>
+
+    <div class="chat-box">
+
+      <div class="chat-header">
+        AI Study Assistant
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+
+        <div class="bot-message">
+          Hello 👋 Ask me any academic question.
+        </div>
+
+      </div>
+
+      <div class="chat-input">
+
+        <input
+          type="text"
+          id="chatInput"
+          placeholder="Ask a question..."
+        >
+
+        <button onclick="sendMessage()">
+          Send
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <h2>Study Streak Hub</h2>
+
+    <p>
+      Premium Educational Productivity Platform
+    </p>
+
+    <div class="footer-links">
+
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+
+    </div>
+
+    <p>
+      Developer: Opeoluwa Michael
+    </p>
+
+    <p>
+      <a href="http.whatapp"> 08134669000</a>
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
